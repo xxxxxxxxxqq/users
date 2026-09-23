@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter or Create Your Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="">
+    <div class="flex items-center flex-col justify-center gap-30 px-10 p-10">
+      <div class="search-create-box w-full flex items-center justify-around">
+        <input
+          class="search px-5 py-3 rounded-xl outline-none bg-[#111] text-[#888] text-[#fff]"
+          type="text"
+          placeholder="Search your card..."
+        />
+        <div class="guide px-4 py-2 bg-blue-600 text-lg font-semibold text-white cursor-pointer rounded shadow-xl duration-100 ease-linear">
+          <a href="./contribution/guide.html">Open Source Collaboration Guide</a>
+        </div>
+        <div class="flex items-center gap-2 font-bold">
+          <span>Create Your Card</span
+          ><button
+            id="create-card"
+            class="px-3 py-0.5 rounded-[50%] outline-none bg-black text-[#fff] text-4xl font-bold cursor-pointer"
+          >
+            +
+          </button>
+        </div>
+      </div>
+
+      <form
+        class="userForm border-2 px-5 py-8 flex flex-col items-center justify-between gap-3 h-100 w-80 rounded-xl hidden"
+        autocomplete="off"
+      >
+        <div class="flex flex-col gap-1 w-full">
+          <label class="font-semibold px-2 text-gray-400" for="image">Upload High Quality Image</label>
+          <input
+            class="border border-gray-300 px-2 py-2 rounded focus:outline-none cursor-pointer"
+            type="file"
+            accept="image/*"
+            id="image"
+          />
+          <h3  class="w-full text-center">OR</h3>
+          <input
+            class="border border-gray-300 px-2 py-2 rounded focus:outline-none cursor-pointer"
+            type="text"
+            name="pic"
+            id="pic"
+            placeholder="Paste your image URL here..."
+          />
+        </div>
+        <input
+          class="w-full border border-gray-300 px-2 py-2 rounded focus:outline-none"
+          type="text"
+          name="name"
+          placeholder="Enter your name..."
+          required
+        />
+        <input
+          class="w-full border border-gray-300 px-2 py-2 rounded focus:outline-none"
+          type="text"
+          name="bio"
+          maxlength="50"
+          placeholder="Enter bio..."
+          required
+        />
+        <div class="flex flex-col gap-2 w-full">
+          <input
+            class="border border-gray-300 px-5 py-2 rounded bg-blue-500 text-[#fff] font-bold cursor-pointer focus:outline-none"
+            type="submit"
+            value="Create Card"
+          />
+          <button
+            class="closeForm border border-gray-300 px-10 py-2 rounded bg-red-600 text-[#fff] font-bold cursor-pointer"
+          >
+            Close Form
+          </button>
+        </div>
+      </form>
+
+      <div
+        class="card-container flex flex-wrap items-center justify-center gap-10"
+      ></div>
+    </div>
+
+    <footer
+      class="h-40 w-full bg-black text-white text-center flex flex-col items-center justify-center gap-5 p-5"
+    >
+      <p>
+        Maintained and Designed by
+        <a class="text-yellow-500 font-bold" href="https://github.com/sapnendra"
+          >Sapnendra</a
+        >
+      </p>
+      <p>Demonstrate the search functionality and DOM manipulation.</p>
+      <p>
+        &copy; 2025 <a href="https://sapnendra.com">sapnendra.com</a>. All
+        rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
